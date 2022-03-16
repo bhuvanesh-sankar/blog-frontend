@@ -1,0 +1,42 @@
+.user-profile-container {
+    background-color: #24252A;
+    border-radius: 20px;
+    margin: 50px 0;
+    padding: 25px;
+
+    p.user-name {
+        margin-bottom: 10px;
+        font-size: 23px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        color: grey;
+        
+    }
+    .user-profile-body {   
+        .profile-card {
+            margin-bottom: 10px;
+
+            span {
+                font-size: 20px;
+                
+                &.text {
+                    color: grey;
+                }
+
+                &.value {
+                    color: grey;
+                }
+            }
+        }
+    }
+
+}
+
+.post-wrapper {
+    p.heading {
+        margin-bottom: 20px;
+        font-size: 23px;
+        font-weight: bolder;
+        color: grey;
+    }
+}

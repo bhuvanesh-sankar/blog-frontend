@@ -1,0 +1,46 @@
+<div class="post-container">
+    <h4>{{post.title}}</h4>
+    <div class="left left-container">
+        <div class="image-container">
+            <img src={{post.image_url}} alt="Bloggr"/>
+        </div>
+        {{#link-to "user-profile" userid}}{{username}}{{/link-to}}
+        <p class="left user-name">
+            {{#link-to "user-profile" post.user_id}}
+                {{post.user_name}}
+            {{/link-to}}
+        </p>
+        <div class="right like-container">
+            <span class="likes">{{post.likes}}</span>
+            {{#add-like postId = post.id}}
+            {{/add-like}}
+            {{#if canEditPost}}
+                <span class="edit-post">{{#link-to "edit-post" post.id}}{{fa-icon "fa-solid fa-pencil"}}{{/link-to}}</span>
+            {{/if}}
+            {{#if canDeletePost}}
+                <span class="delete-post" {{action "deletePost" on="click"}}>{{fa-icon "fa-solid fa-trash"}}</span>
+            {{/if}}
+        </div>
+        <p class="clear-both-before">{{post.description}}</p>
+    </div>
+    <div class="right right-container">
+        <div class="comment-container">
+            <h5>Comments</h5>
+            <div class="comment-inner-container">
+                {{#each post.comments as |comment|}}
+                    <div class="comment">
+                        <p>{{comment.description}}</p>
+                        <div class="comment-footer">
+                            <span class="user-name">{{comment.user_name}},</span>
+                            <span class="created-at">{{getFormattedDate comment.created_at}}</span>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+
+            {{#add-comment postId = post.id}}
+            {{/add-comment}}
+        </div>
+    </div>
+    <div class="clear-both-before"></div>
+</div>

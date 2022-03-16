@@ -1,0 +1,21 @@
+@import 'ember-roboto-fontface/roboto/sass/roboto-fontface';
+
+@import "../../public/bootstrap-4.0.0/scss/bootstrap.scss";
+
+@import "./global.scss";
+
+
+//Pages
+@import "pages/login.scss";
+@import "pages/signup.scss";
+@import "pages/trending.scss";
+@import "pages/user-profile.scss";
+
+//Components
+@import "components/blog-header";
+@import "components/post-card";
+@import "components/post-page.scss";
+
+
+
+

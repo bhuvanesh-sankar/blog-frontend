@@ -1,0 +1,8 @@
+{{#blog-header}}
+{{/blog-header}}
+<div class="post-list-container">
+{{#each model as |post|}}
+    {{#post-card post=post}}
+    {{/post-card}}
+{{/each}}
+</div>

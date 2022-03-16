@@ -1,0 +1,24 @@
+{{#blog-header}}
+{{/blog-header}}
+<div class="form login-signup-form">
+    <form {{action "signup" on="submit"}}>
+        <div class="form-field">
+            {{input type="text" value=username placeholder="Your name"}}
+        </div>
+        <div class="form-field">
+            {{input type="password" value=password placeholder="Password"}}
+        </div>
+        <div class="form-field">
+            {{input type="email" value=email placeholder="Email-address"}}
+        </div>
+        <div class="form-field">
+            {{input type="date" value=dateOfBirth placeholder="Date of birth"}}
+        </div>
+        {{#if isSignUpFailed}}
+            <div class="alert alert-danger">{{errorMessage}}</div>
+        {{/if}}
+
+        <button type="submit" class="action-button">Sign Up</button>
+    </form>
+    <p>Already have an account? {{#link-to "login"}} Log in.{{/link-to}}</p>
+</div>

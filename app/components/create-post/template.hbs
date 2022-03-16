@@ -1,0 +1,39 @@
+<div class="form create-post-form">
+    <form {{action "handlePost" on="submit"}}>
+        <div class="form-field">
+            {{input type="text" value=postTitle placeholder="Title" }}
+        </div>
+        <div class="form-field">
+            {{input type="text" value=postDescription placeholder="Description" }}
+        </div>
+        <div class="form-field">
+            {{input type="text" value=imageUrl placeholder="Image Url" }}
+        </div>
+        <div class="form-field">
+            <span class="category-text">Categories: </span>
+            <select id="postType">
+                <option hidden disabled selected value></option>
+                {{#each postTypes as |postType|}}
+                    <option value={{postType.id}}>{{postType.post_type}}</option>
+                {{/each}}
+            </select>
+        </div>
+        {{#if create}}
+            {{#if isPostCreationFailed}}
+                <div class="alert alert-danger">Unable to create post, check if all the data are entered and try again ...</div>
+            {{/if}}
+        {{/if}}
+        {{#if edit}}
+            {{#if isPostEditFailed}}
+                <div class="alert alert-danger">Unable to update post, please enter atleast one field to update and try again ...</div>
+            {{/if}}
+        {{/if}}
+
+        {{#if edit}}
+            <button type="submit" class="action-button">Update Post</button>
+        {{else}}
+            <button type="submit" class="action-button">Create Post</button>
+        {{/if}}
+        
+    </form>
+</div>

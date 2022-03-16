@@ -1,0 +1,27 @@
+<div id="header" class="header">
+    <div class="header-left">
+        {{#link-to "trending"}}<h3>BLOGGR</h3>{{/link-to}}
+    </div>
+    <div class = "header-right">
+        <ul>
+            {{#if session.isLoggedIn}}
+             <li class="user-name">Welcome, {{#link-to "user-profile" userid}}{{username}}{{/link-to}}!</li>
+             <li>{{#link-to "trending" class="trending"}}Trending{{/link-to}}</li>
+             <li>{{#link-to "create-post" class="create-post"}}Create Post{{/link-to}}</li>
+              <li>
+                {{#log-out}}
+                {{/log-out}}
+              </li>
+            {{else}}
+                <li>Hello, user!</li>
+                <li>{{#link-to "trending" class="trending"}}Trending{{/link-to}}</li>
+                <li>{{#link-to "login" class="login"}}Login{{/link-to}}</li>
+                <li>{{#link-to "signup" class="signup"}}Signup{{/link-to}}</li>
+            {{/if}}
+            <li>
+                {{#log-out}}
+                {{/log-out}}
+              </li>
+        </ul>
+    </div>
+</div>

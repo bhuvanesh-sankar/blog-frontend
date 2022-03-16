@@ -1,0 +1,18 @@
+{{#link-to "post" post.id}}
+    <div class="card">
+        <div class="card-header">
+            {{#if post.isFavourite}}
+                <span class="faviourite-icon">{{fa-icon "fa-solid fa-heart"}}</span>
+            {{/if}}
+            <div class="card-img">
+                <img src={{post.image_url}}/>
+            </div>
+            <p class="created-at left">{{getFormattedDate post.created_at}}</p>
+            <p class="likes right">{{post.likes}} likes</p>
+        </div>
+        <div class="card-body clear-both-before">
+            <h5 class="title">{{post.title}}</h5>
+            <p>{{post.description}}</p>
+        </div>
+    </div>
+{{/link-to}}

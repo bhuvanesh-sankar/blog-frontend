@@ -1,0 +1,10 @@
+{{#blog-header}}
+{{/blog-header}}
+
+{{#if model.isSuccess}}
+{{#post-page post=model.post}}
+{{/post-page}}
+
+{{else}}
+    <h5 class="error-msg">Unable to retrieve post, try later...</h5>
+{{/if}}

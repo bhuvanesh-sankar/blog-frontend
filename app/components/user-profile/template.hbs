@@ -1,0 +1,20 @@
+
+<div class="user-profile-container">
+    <p class="user-name">{{user.name}}</p>
+    <div class="user-profile-body">
+        <div class="profile-card email">
+            <span class="text">Email : </span>
+            <span class="value">{{user.email}}</span>
+        </div>
+        {{#if user.date_of_birth}}
+            <div class="profile-card date-of-birth">
+                <span class="value">Date Of Birth : </span>
+                <span class="text">{{getFormattedDate user.date_of_birth}}</span>
+            </div>
+        {{/if}}
+        <div class="profile-card posts">
+            <span class="text">Posts : </span>
+            <span class="value">{{postsSize}}</span>
+        </div>
+    </div>
+</div>

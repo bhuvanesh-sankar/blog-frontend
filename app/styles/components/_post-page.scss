@@ -1,0 +1,115 @@
+@import './add-comment';
+.post-container {
+    font-weight: 300;
+    > h4 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 300;
+        font-size: 27px;
+        letter-spacing: 2px;
+        color: white;
+    }
+    .left-container {
+        width: 55%;
+        font-weight: 300;
+        .image-container {
+            width: 100%;
+            height: 600px;
+            margin-bottom: 5px;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+            }
+        }
+
+        .user-name {
+            a {
+                text-transform: capitalize;
+                font-size: 17px;
+                text-decoration: none;
+                color: grey;
+            }    
+        }
+
+        .like-container {
+            margin-bottom: 30px;
+            display: flex;
+            font-size: 17px;
+            color: grey;
+
+            .likes, .add-like {
+                margin-right: 15px;
+            }
+
+            span {
+                display: inline;
+                cursor: pointer;
+            }
+
+            .add-like, .remove-like, .edit-post, .delete-post {
+                &:hover{
+                    transform: scale(1.3);
+                    transition: transform 200ms ease-in-out;
+                }
+            }
+            span.delete-post, span.edit-post {
+                margin-left: 15px;
+                cursor: pointer;
+
+                a{
+                    color: grey;
+                }
+            }
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 300;
+            color: grey;
+        }
+    }
+
+    .right-container {
+        width: calc(40% - 50px);
+
+        .comment-container {
+            position: relative;
+            height: 700px;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: #24252A;            
+
+            h5 {
+                margin-bottom: 20px;
+                font-weight: 300;
+                font-size: 23px;
+                color: grey;
+                text-align: center;
+            }
+
+            .comment-inner-container {
+                height: 500px;
+                overflow-y: scroll;
+            }
+        }
+        .comment {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 20px;
+            text-transform: capitalize;
+            background-color: grey;
+            color: white;
+            
+
+            >p {
+                margin-bottom: 5px;
+            }
+            .comment-footer {
+                font-size: 12px;
+                color: white;
+            }
+        }
+    }
+}

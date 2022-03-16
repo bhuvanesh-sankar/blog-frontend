@@ -1,0 +1,31 @@
+.add-comment-form {
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+    margin-top: 20px;
+
+    textarea {
+        width: 100%;
+        padding: 10px 70px 10px 10px;
+        border-radius: 20px;
+        background-color: grey;
+        outline: none;
+
+        &::placeholder {
+            font-weight: 300;
+            color: white;
+        }
+    }
+
+    button {
+        position: absolute;
+        right: 20px;
+        top: 9px;
+        font-size: 35px;
+        border: none;
+        background-color: transparent;
+        color: #24252A;
+        cursor: pointer;
+        outline: none;
+    }
+}

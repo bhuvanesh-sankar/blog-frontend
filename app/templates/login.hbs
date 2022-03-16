@@ -1,0 +1,18 @@
+{{#blog-header}}
+{{/blog-header}}
+<div class="form login-signup-form">
+    <form {{action "login" on="submit"}}>
+        <div class="form-field">
+            {{input type="email" value=email placeholder="E-mail address" }}
+        </div>
+        <div class="form-field">
+            {{input type="password" value=password placeholder="password"}}
+        </div>
+        {{#if loginFailed}}
+            <div class="alert alert-danger">Unable to log in.</div>
+        {{/if}}
+        <button type="submit" class="action-button">Sign In</button>
+    </form>
+
+    <p>Don't have an account? {{#link-to "signup"}} Create it.{{/link-to}}</p>
+</div>

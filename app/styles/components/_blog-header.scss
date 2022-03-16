@@ -1,0 +1,38 @@
+#header {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    font-size: 18px;
+    // color: rgb(86, 84, 85);
+    cursor: pointer;
+    color: white;
+    color: #88B181;
+    // color: #24252A;
+
+    a {
+        text-decoration: none;
+        color: white;
+        color: #88B181;
+        // color: #24252A;
+    }
+
+    .header-right {
+        ul {
+            display: inline-flex;
+            list-style-type: none;
+
+            .user-name {
+                text-transform: capitalize;
+            }
+            
+            li:not(:last-child) {
+                margin-right: 25px;
+            }
+
+            li:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

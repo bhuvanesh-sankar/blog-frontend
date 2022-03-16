@@ -1,0 +1,17 @@
+{{#blog-header}}
+{{/blog-header}}
+
+{{#user-profile postsSize = model.posts.length user = model.user }}
+{{/user-profile}}
+
+{{#if model.posts.length}}
+<div class="post-wrapper">
+    <p class="heading">Posts created ...</p>
+    <div class="post-list-container">
+    {{#each model.posts as |post|}}
+        {{#post-card post=post canDelete=true}}
+        {{/post-card}}
+    {{/each}}
+    </div>
+</div>
+{{/if}}
